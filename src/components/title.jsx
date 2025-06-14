@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  WEDDING_DATE,
-  WEDDING_LOCATION,
-  GROOM_NAME,
-  BRIDE_NAME,
+  DATE,
+  LOCATION,
 } from "../../config.js";
 import BackgroundVideo from "../assets/BackgroundVideo.mp4";
 import GroovePaper from "../assets/GroovePaper.png";
 
 const Layout = styled.div`
-  width: 70%;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto;
 `;
@@ -28,13 +26,11 @@ const TitleWrapper = styled.div`
 `;
 
 const VideoBackground = styled.video`
-  width: 100%;
-`;
-
-const WeddingInvitation = styled.p`
-  font-size: 0.825rem;
-  opacity: 0.45;
-  margin-bottom: 16px;
+  width: 90%;
+  max-width: 1280px;
+  max-height: 720px;
+  display: block;
+  margin: 0 auto;
 `;
 
 const GroomBride = styled.p`
@@ -53,14 +49,13 @@ const Title = () => {
   return (
     <Layout>
       <TitleWrapper>
-        <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
         <GroomBride>
-          {GROOM_NAME} &#38; {BRIDE_NAME}
+          타카마츠 토모리 생일카페에 초대합니다
         </GroomBride>
         <Schedule>
-          {WEDDING_DATE}
+          2025년 11월 22일, 토요일
           <br />
-          {WEDDING_LOCATION}
+          <br />
         </Schedule>
       </TitleWrapper>
       <VideoBackground autoPlay loop muted playsInline={true}>

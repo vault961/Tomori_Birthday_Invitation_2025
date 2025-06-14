@@ -7,7 +7,7 @@ import styled from "styled-components";
 import {
   KAKAOTALK_API_TOKEN,
   KAKAOTALK_SHARE_IMAGE,
-  WEDDING_INVITATION_URL,
+  URL,
   GROOM_NAME,
   BRIDE_NAME,
 } from "../../config";
@@ -117,7 +117,7 @@ const Share = () => {
       >
         카카오톡으로 공유하기
       </KakaoTalkShareButton>
-      <CopyToClipboard text={WEDDING_INVITATION_URL}>
+      <CopyToClipboard text={URL}>
         <LinkShareButton
           style={{ margin: 0 }}
           icon={<LinkOutlined />}

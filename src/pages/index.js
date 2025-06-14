@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Layout } from "antd";
 import styled from "styled-components";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "antd/dist/antd.css";
 import Gallery from "../components/gallery";
-import Greeting from "../components/greeting";
 import Title from "../components/title";
 import "../styles/index.css";
 
 import GroovePaper from "../assets/GroovePaper.png";
 import Location from "../components/location";
-import CongratulatoryMoney from "../components/congratulatoryMoney";
-import Share from "../components/share";
 import Quote from "../components/quote";
-import Song from "../assets/song.mp3";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import AudioPlayer from "../components/audioPlayer";
 
 // markup
 const { Footer } = Layout;
@@ -25,9 +23,11 @@ const Wrapper = styled.div`
   background: #efebe9;
   background-image: url(${GroovePaper});
   width: 100%;
+  padding-bottom: 100px;
 `;
 
 const IndexPage = () => {
+
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;
@@ -35,7 +35,7 @@ const IndexPage = () => {
     document.body.appendChild(script);
 
     return () => {
-      document.body.romoveChile(script);
+      document.body.removeChild(script);
     };
   }, []);
 
@@ -46,26 +46,11 @@ const IndexPage = () => {
   });
   return (
     <Wrapper>
-      <audio autoPlay loop>
-        <source src={Song} />
-      </audio>
+      <AudioPlayer />
       <Title />
-      <Greeting />
+      <Quote />
       <Gallery />
       <Location />
-      <Quote />
-      <CongratulatoryMoney />
-      <Share />
-      <Footer
-        style={{
-          background: "#D7CCC8",
-          backgroundImage: `url(${GroovePaper})`,
-          opacity: 0.6,
-          textAlign: "center",
-        }}
-      >
-        Copyright © 2022 Shin Jooyoung
-      </Footer>
     </Wrapper>
   );
 };

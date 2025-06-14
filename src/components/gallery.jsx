@@ -9,10 +9,11 @@ import GalleryPhoto3 from "../assets/Gallery_Photo_3.webp";
 import GalleryPhoto4 from "../assets/Gallery_Photo_4.webp";
 import GalleryPhoto5 from "../assets/Gallery_Photo_5.webp";
 import GalleryPhoto6 from "../assets/Gallery_Photo_6.webp";
+import GalleryPhoto7 from "../assets/Gallery_Photo_7.jpg";
 
 const Wrapper = styled.div`
   padding-top: 42px;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 `;
 
@@ -50,13 +51,17 @@ const images = [
     original: GalleryPhoto6,
     thumbnail: GalleryPhoto6,
   },
+  {
+    original: GalleryPhoto7,
+    thumbnail: GalleryPhoto7,
+  },
 ];
 
 const Gallery = () => {
   return (
     <Wrapper>
       <Divider style={{ marginTop: 0, marginBottom: 32 }} plain>
-        <Title>우리의 아름다운 순간</Title>
+        <Title>아름다웠던 순간들</Title>
       </Divider>
       <ImageGallery
         showPlayButton={false}

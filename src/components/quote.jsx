@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const Content = styled.span`
   display: block;
   margin: 0 auto;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-family: "mom_to_daughter";
   text-align: center;
   color: var(--title-color);
@@ -34,20 +34,29 @@ const Image = styled.img`
   padding-bottom: 42px;
 `;
 
+const BigQuote = styled.div`
+  font-size: 2.2rem;
+  font-family: "mom_to_daughter";
+  text-align: center;
+  color: var(--title-color);
+  line-height: 2.8rem;
+  opacity: 0.85;
+  margin: 60px 0;
+`;
+
 const Quote = () => {
   return (
     <Wrapper>
       <Image src={Flower} data-aos="fade-up" />
       <Content data-aos="fade-up">
-        장담하건대. 세상이 다 겨울이어도
         <br />
-        우리 사랑은 늘봄처럼 따뜻하고
+        상처투성이의 못생긴 우리들의 음악
         <br />
-        간혹, 여름처럼 뜨거울 겁니다
+        미아라도 좋아, 미아라도 앞으로 나아가.
         <br />
-        <br />
-        - 이수동, (사랑가) -
-        <br />
+        <BigQuote data-aos="fade-up">
+        「평생 밴드 해 줄래?」
+        </BigQuote>
         <br />
       </Content>
     </Wrapper>
