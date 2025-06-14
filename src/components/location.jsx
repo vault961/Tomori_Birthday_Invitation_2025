@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Divider } from "antd";
 import styled from "styled-components";
-import Flower from "../assets/flower2.png";
+import Symbol from "../assets/symbol2.webp";
 
 const Wrapper = styled.div`
   padding-top: 42px;
@@ -20,7 +20,6 @@ const Title = styled.span`
 const Image = styled.img`
   display: block;
   margin: 0 auto;
-  width: 1.375rem;
   padding-bottom: 42px;
 `;
 
@@ -97,7 +96,7 @@ const Location = () => {
       <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
         <Title>오시는 길</Title>
       </Divider>
-      <Image src={Flower} />
+      <Image src={Symbol} />
       <Map
         id="daumRoughmapContainer1746936916803"
         className="root_daum_roughmap root_daum_roughmap_landing"

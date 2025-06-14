@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import QuotePaper from "../assets/Quote.png";
-import Flower from "../assets/flower1.png";
+import Symbol from "../assets/symbol1.webp";
 
 const Wrapper = styled.div`
   padding-top: 42px;
@@ -30,7 +30,6 @@ const Content = styled.span`
 const Image = styled.img`
   display: block;
   margin: 0 auto;
-  width: 1.375rem;
   padding-bottom: 42px;
 `;
 
@@ -47,7 +46,7 @@ const BigQuote = styled.div`
 const Quote = () => {
   return (
     <Wrapper>
-      <Image src={Flower} data-aos="fade-up" />
+      <Image src={Symbol} data-aos="fade-up" />
       <Content data-aos="fade-up">
         <br />
         상처투성이의 못생긴 우리들의 음악

@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Song from "../assets/song.mp3";
 import PlayIcon from "../assets/play.png";
 import PauseIcon from "../assets/pause.png";
-import "./AudioPlayer.css"; // 애니메이션용 CSS 분리
 
 const AudioPlayer = () => {
   const audioRef = useRef(null);
@@ -20,7 +19,7 @@ const AudioPlayer = () => {
           audioRef.current.play().then(() => setStatus("playing"));
         });
       }
-    }, 1000);
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
 

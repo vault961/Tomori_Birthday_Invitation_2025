@@ -16,7 +16,7 @@ const Layout = styled.div`
 const TitleWrapper = styled.div`
   width: 100%;
   text-align: center;
-  padding-top: 42px;
+  padding-top: 70px;
   font-weight: 500 !important;
   color: var(--title-color);
   animation: fadein 3s;
